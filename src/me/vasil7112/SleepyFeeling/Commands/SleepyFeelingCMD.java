@@ -26,7 +26,7 @@ public class SleepyFeelingCMD implements CommandExecutor {
 						plugin.SEU.ShowEnergyToPlayer(Bukkit.getPlayerExact(sender.getName().toString()));
 						return true;
 					}else{
-						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command");
+						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command!");
 						return true;
 					}
 				}else if(args[0].equalsIgnoreCase("wakeup")){
@@ -34,7 +34,7 @@ public class SleepyFeelingCMD implements CommandExecutor {
 						PIL.exitBed(Bukkit.getPlayerExact(sender.getName()));
 						return true;
 				}else{
-					sender.sendMessage(ChatColor.RED+"This command doesn't exist");
+					sender.sendMessage(ChatColor.RED+"This command doesn't exist!");
 					return true;
 				}
 			}else if(args.length == 2){
@@ -48,11 +48,29 @@ public class SleepyFeelingCMD implements CommandExecutor {
 							return true;
 						}
 					}else{
-						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command");
+						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command!");
+						return true;
+					}
+				}else if(args[0].equalsIgnoreCase("add")){
+					if(sender.hasPermission("SleepyFeeling.addEnergy")){
+						plugin.EARU.AddEnergy(Bukkit.getPlayerExact(sender.getName()), args[1]);
+						sender.sendMessage("You've added "+args[1]+" Energy points to yourself");
+						return true;
+					}else{
+						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command!");
+						return true;
+					}
+				}else if(args[0].equalsIgnoreCase("rem")){
+					if(sender.hasPermission("SleepyFeeling.remEnergy")){
+						plugin.EARU.RemEnergy(Bukkit.getPlayerExact(sender.getName()), args[1]);
+						sender.sendMessage("You've removed "+args[1]+" Energy points from yourself");
+						return true;
+					}else{
+						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command!");
 						return true;
 					}
 				}else{
-					sender.sendMessage(ChatColor.RED+"This command doesn't exist");
+					sender.sendMessage(ChatColor.RED+"This command doesn't exist!");
 					return true;
 				}
 			}else if(args.length == 3){
@@ -67,7 +85,7 @@ public class SleepyFeelingCMD implements CommandExecutor {
 							return true;
 						}
 					}else{
-						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command");
+						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command!");
 						return true;
 					}
 				}else if(args[0].equalsIgnoreCase("rem")){
@@ -81,11 +99,11 @@ public class SleepyFeelingCMD implements CommandExecutor {
 							return true;
 						}
 					}else{
-						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command");
+						sender.sendMessage(ChatColor.RED+"You don't have enough permissions to perform this command!");
 						return true;
 					}
 				}else{
-					sender.sendMessage(ChatColor.RED + "This command doesn't exist");
+					sender.sendMessage(ChatColor.RED + "This command doesn't exist!");
 					return true;
 				}
 				
@@ -93,8 +111,9 @@ public class SleepyFeelingCMD implements CommandExecutor {
 				sender.sendMessage(ChatColor.RED+"SleepyFeeling Commands: \n"+
 								   ChatColor.RED+"/SleepyFeeling wakeup - Wakes you up if you are sleeping\n"+
 								   ChatColor.RED+"/SleepyFeeling check - \n"+
-								   ChatColor.RED+"/SleepyFeeling add <playername> <energy>- \n"+
-								   ChatColor.RED+"/SleepyFeeling rem <playername> <energy> - \n");
+								   ChatColor.RED+"/SleepyFeeling add (playername) <energy>- \n"+
+								   ChatColor.RED+"/SleepyFeeling rem (playername) <energy> - \n"+
+								   ChatColor.RED+"------\"()\" Optional - \"<>\" Required------");
 				return true;
 			}
 		}
