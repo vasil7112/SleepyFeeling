@@ -6,25 +6,26 @@ import me.vasil7112.SleepyFeeling.SleepyFeeling;
 
 public class EnergyAddRemUtil {
 
-	private SleepyFeeling plugin;
-	
-	public EnergyAddRemUtil(SleepyFeeling plugin){
-		this.plugin = plugin;
+	private final SleepyFeeling sleepyFeeling;
+
+	public EnergyAddRemUtil(SleepyFeeling sleepyFeeling) {
+		this.sleepyFeeling = sleepyFeeling;
 	}
 	
 	public void AddEnergy(Player player, String energy){
-		if(plugin.Energy.get(player) + Float.valueOf(energy) > plugin.MaxEnergy){
-			plugin.Energy.put(player, plugin.MaxEnergy);
+		if(sleepyFeeling.Energy.get(player) + Float.valueOf(energy) > sleepyFeeling.MaxEnergy){
+			sleepyFeeling.Energy.put(player, sleepyFeeling.MaxEnergy);
 		}else{
-			plugin.Energy.put(player, plugin.Energy.get(player) + Float.valueOf(energy));
+			sleepyFeeling.Energy.put(player, sleepyFeeling.Energy.get(player) + Float.valueOf(energy));
 		}
 	}
 	
 	public void RemEnergy(Player player, String energy){
-		if(plugin.Energy.get(player) - Float.valueOf(energy) < Float.valueOf(0.0f)){
-			plugin.Energy.put(player, Float.valueOf(0.0F));
+		if(sleepyFeeling.Energy.get(player) - Float.valueOf(energy) < Float.valueOf(0.0f)){
+			sleepyFeeling.Energy.put(player, Float.valueOf(0.0F));
 		}else{
-			plugin.Energy.put(player, plugin.Energy.get(player) - Float.valueOf(energy));
+			sleepyFeeling.Energy.put(player, sleepyFeeling.Energy.get(player) - Float.valueOf(energy));
 		}
 	}
+
 }

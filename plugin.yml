@@ -1,7 +1,7 @@
 main: me.vasil7112.SleepyFeeling.SleepyFeeling
 name: SleepyFeeling
 description: SleepyFeeling
-version: 1.2.0
+version: 1.2.1
 author: vasil7112
 commands:
    SleepyFeeling:
