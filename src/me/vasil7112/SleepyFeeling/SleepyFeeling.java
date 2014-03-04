@@ -9,13 +9,19 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.earth2me.essentials.User;
+import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import me.vasil7112.SleepyFeeling.Schedules.ConnectionScheclule;
 import me.vasil7112.SleepyFeeling.Schedules.EnergyDecreaseScheclule;
 import me.vasil7112.SleepyFeeling.Schedules.PotionEffectsScheclule;
 import me.vasil7112.SleepyFeeling.Schedules.WaysToGetEnergySchecule;
+import net.ess3.api.IEssentials;
+import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.vasil7112.SleepyFeeling.Commands.SleepyFeelingCMD;
 import me.vasil7112.SleepyFeeling.Configuration.ConfigConf;
@@ -40,6 +46,10 @@ import org.bukkit.scheduler.BukkitScheduler;
 
 public class SleepyFeeling extends JavaPlugin{
 
+	public static Permission permissions = null;
+	public static WorldGuardPlugin worldguardPlugin = null;
+	public static IEssentials essentials = null;
+
 	public PlayersConf pConfig = new PlayersConf(this);
 	public ConfigConf cConfig = new ConfigConf(this);
 	public PotionEffectsUtil PEU;
@@ -53,65 +63,27 @@ public class SleepyFeeling extends JavaPlugin{
 	public Float EnergyDecreaseAmount = null;
 	public Float MaxEnergy = null;
 
-	@Override
-	public void onEnable(){
-		PluginManager pluginManager = Bukkit.getPluginManager();
+	public void onLoad(){
 		BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 
 		pConfig.getCustomConfig();
 		cConfig.getCustomConfig();
 
+		SEU = new ShowEnergyUtil(this);
 		PEU = new PotionEffectsUtil(this);
 		EARU = new EnergyAddRemUtil(this);
 		EnergyDecreaseTick = getConfigInt("Configuration.Energy.EnergyDecreaseTick");
 		EnergyDecreaseAmount = Float.valueOf(getConfigString("Configuration.Energy.EnergyDecreaseAmount"));
 		MaxEnergy = Float.valueOf(getConfigString("Configuration.Energy.MaxEnergy"));
 
-		PotionCraftingUtil PCU = new PotionCraftingUtil(this);
-		PCU.addCraftingRecipes();
-
-		if(getConfigBoolean("Configuration.WaysToLoseEnergy.Walking.Enabled")){
-			pluginManager.registerEvents(new PlayerMove_Walking_Listener(this), this);
-		}
-		if(getConfigBoolean("Configuration.WaysToLoseEnergy.Sprinting.Enabled")){
-			pluginManager.registerEvents(new PlayerMove_Sprinting_Listener(this), this);
-		}
-		if(getConfigBoolean("Configuration.WaysToLoseEnergy.Swimming.Enabled")){
-			pluginManager.registerEvents(new PlayerMove_Swimming_Listener(this), this);
-		}
-		if(getConfigBoolean("Configuration.WaysToLoseEnergy.BlockBreaking.Enabled")){
-			pluginManager.registerEvents(new BlockBreakListener(this), this);
-		}
-		if(getConfigBoolean("Configuration.WaysToLoseEnergy.BlockPlacing.Enabled")){
-			pluginManager.registerEvents(new BlockPlaceListener(this), this);
-		}
-		if(getConfigBoolean("Configuration.WaysToGetEnergy.Sleeping.Enabled")){
-			pluginManager.registerEvents(new PlayerSleepListener(this), this);
-			scheduler.runTaskTimer(this, new WaysToGetEnergySchecule(this), 20L, 20L * 1L);
-		}
-
-		pluginManager.registerEvents(new PlayerJoinListener(this), this);
-		pluginManager.registerEvents(new PlayerQuitListener(this), this);
-		pluginManager.registerEvents(new PlayerDeathListener(this), this);
-		pluginManager.registerEvents(new PlayerRespawnListener(this), this);
-		pluginManager.registerEvents(new PlayerItemConsumeListener(this), this);
-		pluginManager.registerEvents(new PlayerMove_Walking_Listener(this), this);
-
-		getCommand("SleepyFeeling").setExecutor(new SleepyFeelingCMD(this));
-
-		SEU = new ShowEnergyUtil(this);
-
-		scheduler.runTaskTimer(this, new EnergyDecreaseScheclule(this), 20L, 20L * 60L * EnergyDecreaseTick);
-		scheduler.runTaskTimer(this, new PotionEffectsScheclule(this), 20L, 20L * 15L);
-
 		if(getConfigBoolean("AutoUpdate")){	Updater updateCheck = new Updater(52648); }
 
 		try {
-		    MetricsLite metrics = new MetricsLite(this);
-		    metrics.start();
+			MetricsLite metrics = new MetricsLite(this);
+			metrics.start();
 		} catch (IOException e) { e.printStackTrace(); }
 
-		if(getConfigString("Premium-User")!=null){
+		if(getConfigString("Premium-User")!=null) {
 			if(getConfigString("Premium-User.Username")!=null && getConfigString("Premium-User.Password")!=null &&
 					getConfigString("Premium-User.Server-IP")!=null && getConfigString("Premium-User.Server-IMG-468x60")!=null){
 				URL url;
@@ -148,9 +120,51 @@ public class SleepyFeeling extends JavaPlugin{
 		}
 	}
 
+	public void onEnable() {
+		PluginManager pluginManager = Bukkit.getPluginManager();
+		BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 
-	@Override
-	public void onDisable(){
+		setupPermissions();
+		setupWorldGuard();
+		setupIEssentials();
+
+		PotionCraftingUtil PCU = new PotionCraftingUtil(this);
+		PCU.addCraftingRecipes();
+
+		if(getConfigBoolean("Configuration.WaysToLoseEnergy.Walking.Enabled")) {
+			pluginManager.registerEvents(new PlayerMove_Walking_Listener(this), this);
+		}
+		if(getConfigBoolean("Configuration.WaysToLoseEnergy.Sprinting.Enabled")) {
+			pluginManager.registerEvents(new PlayerMove_Sprinting_Listener(this), this);
+		}
+		if(getConfigBoolean("Configuration.WaysToLoseEnergy.Swimming.Enabled")) {
+			pluginManager.registerEvents(new PlayerMove_Swimming_Listener(this), this);
+		}
+		if(getConfigBoolean("Configuration.WaysToLoseEnergy.BlockBreaking.Enabled")) {
+			pluginManager.registerEvents(new BlockBreakListener(this), this);
+		}
+		if(getConfigBoolean("Configuration.WaysToLoseEnergy.BlockPlacing.Enabled")) {
+			pluginManager.registerEvents(new BlockPlaceListener(this), this);
+		}
+		if(getConfigBoolean("Configuration.WaysToGetEnergy.Sleeping.Enabled")) {
+			pluginManager.registerEvents(new PlayerSleepListener(this), this);
+			scheduler.runTaskTimer(this, new WaysToGetEnergySchecule(this), 20L, 20L * 1L);
+		}
+
+		pluginManager.registerEvents(new PlayerJoinListener(this), this);
+		pluginManager.registerEvents(new PlayerQuitListener(this), this);
+		pluginManager.registerEvents(new PlayerDeathListener(this), this);
+		pluginManager.registerEvents(new PlayerRespawnListener(this), this);
+		pluginManager.registerEvents(new PlayerItemConsumeListener(this), this);
+		pluginManager.registerEvents(new PlayerMove_Walking_Listener(this), this);
+
+		getCommand("SleepyFeeling").setExecutor(new SleepyFeelingCMD(this));
+
+		scheduler.runTaskTimer(this, new EnergyDecreaseScheclule(this), 20L, 20L * 60L * EnergyDecreaseTick);
+		scheduler.runTaskTimer(this, new PotionEffectsScheclule(this), 20L, 20L * 15L);
+	}
+
+	public void onDisable() {
 		PlayerSleepListener PSL = new PlayerSleepListener(this);
 		for(int i=0;i<Players.size();i++){
 			Player player = Bukkit.getPlayerExact(Players.get(i));
@@ -173,5 +187,47 @@ public class SleepyFeeling extends JavaPlugin{
 	public boolean getConfigBoolean(String link){ return cConfig.getCustomConfig().getBoolean(link); }
 
 	public String getConfigString(String link){ return cConfig.getCustomConfig().getString(link); }
+
+	private boolean setupPermissions() {
+		RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
+		permissions = rsp.getProvider();
+		return permissions != null;
+	}
+
+	private void setupWorldGuard() {
+		Plugin wg = this.getServer().getPluginManager().getPlugin("WorldGuard");
+		if(wg == null) {
+			getLogger().info("WorldGuard was not found. Did you know that by using it, players won't be able to place tents on protected areas?");
+		}else{
+			worldguardPlugin = (WorldGuardPlugin)wg;
+		}
+	}
+
+	private void setupIEssentials() {
+		Plugin ess = this.getServer().getPluginManager().getPlugin("Essentials");
+		if(ess == null) {
+			getLogger().info("Essentials was not found. Did you know that by using it, players won't be able to place tents on protected areas?");
+		}else{
+			essentials = (IEssentials)ess;
+		}
+	}
+
+	public static boolean hasPermission(Player player, String permission) {
+		if (permissions != null){
+			if(permissions.has(player,permission)||player.isOp()){ return true; }
+		} else {
+			if(player.hasPermission(permission)||player.isOp()){ return true; }
+		}
+		return false;
+	}
+
+	public static boolean hasGod(Player player) {
+		if (essentials != null){
+			User user = essentials.getUser(player);
+			return user.isGodModeEnabled();
+		} else {
+			return false;
+		}
+	}
 
 }

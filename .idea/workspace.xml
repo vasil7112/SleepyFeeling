@@ -63,37 +63,7 @@
     <favorites_list name="SleepyFeeling" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SleepyFeelingCMD.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="36" selection-start="5478" selection-end="5516" vertical-scroll-proportion="0.77922076" vertical-offset="1575" max-vertical-offset="2499">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayersConf.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Configuration/PlayersConf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1020">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerSleepListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerSleepListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="53" selection-start="872" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -109,7 +79,6 @@
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/ConnectionScheclule.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/PotionEffectsScheclule.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/WaysToGetEnergySchecule.java" />
-        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/SleepyFeeling.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/EnergyDecreaseScheclule.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/BedExitScheclule.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/ChatFormat.java" />
@@ -118,8 +87,14 @@
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/EnergyAddRemUtil.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/PotionCraftingUtil.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/PotionEffectsUtil.java" />
-        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Swimming_Listener.java" />
         <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Swimming_Listener.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/SleepyFeeling.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Sprinting_Listener.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Walking_Listener.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/BlockPlaceListener.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/BlockBreakListener.java" />
+        <option value="$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/MetricsLite.java" />
       </list>
     </option>
   </component>
@@ -156,6 +131,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,6 +208,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Schedules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SleepyFeeling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SleepyFeeling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SleepyFeeling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Listeners" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -282,7 +280,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +293,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/craftbukkit-1.7.2-R0.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/Essentials.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -338,6 +335,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -363,19 +373,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -448,7 +445,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -465,7 +462,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -491,6 +488,54 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="9" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2499">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/SleepyFeeling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="34" selection-start="2565" selection-end="2565" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="9" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2499">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="36" selection-start="5478" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2499">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Configuration/PlayersConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerSleepListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="53" selection-start="872" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/SleepyFeeling.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="64" selection-start="2661" selection-end="2726" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="3111">
@@ -551,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/MetricsLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="8007">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../SleepyFeeling.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="188" column="41" selection-start="7653" selection-end="7974" vertical-scroll-proportion="0.0" vertical-offset="2157" max-vertical-offset="3638" />
@@ -575,41 +613,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/ConnectionScheclule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/PotionEffectsScheclule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="60" selection-start="305" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/WaysToGetEnergySchecule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="281" selection-end="281" vertical-scroll-proportion="0.18398269" vertical-offset="0" max-vertical-offset="924">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/craftbukkit-1.7.2-R0.3.jar!/org/bukkit/configuration/MemorySection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="16" selection-start="3112" selection-end="3112" vertical-scroll-proportion="0.34198645" vertical-offset="887" max-vertical-offset="2533" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/EnergyDecreaseScheclule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="0.036796536" vertical-offset="0" max-vertical-offset="924">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/craftbukkit-1.7.2-R0.3.jar!/org/bukkit/Bukkit.class">
@@ -617,30 +623,9 @@
         <state line="6" column="19" selection-start="140" selection-end="168" vertical-scroll-proportion="0.0945495" vertical-offset="0" max-vertical-offset="3553" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/BedExitScheclule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="43" selection-start="237" selection-end="237" vertical-scroll-proportion="0.036796536" vertical-offset="0" max-vertical-offset="924">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/Float.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="19" selection-start="887" selection-end="958" vertical-scroll-proportion="0.33333334" vertical-offset="83" max-vertical-offset="14824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/SleepyFeeling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="42" selection-start="2823" selection-end="2823" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2499">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/EnergyAddRemUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="70" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
@@ -661,83 +646,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/PotionCraftingUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="61" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerRespawnListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerQuitListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Walking_Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Swimming_Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerItemConsumeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1071">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#625#644#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/BlockPlaceListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/craftbukkit-1.7.2-R0.3.jar!/org/bukkit/ChatColor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="12" selection-start="152" selection-end="152" vertical-scroll-proportion="0.10131109" vertical-offset="0" max-vertical-offset="839">
-          <folding />
-        </state>
+        <state line="6" column="12" selection-start="152" selection-end="152" vertical-scroll-proportion="0.10131109" vertical-offset="0" max-vertical-offset="839" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/craftbukkit-1.7.2-R0.3.jar!/org/bukkit/command/CommandSender.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="264" selection-end="264" vertical-scroll-proportion="0.11617312" vertical-offset="0" max-vertical-offset="878">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerDeathListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="50" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="7" column="40" selection-start="264" selection-end="264" vertical-scroll-proportion="0.11617312" vertical-offset="0" max-vertical-offset="878" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Configuration/ConfigConf.java">
@@ -747,9 +663,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/BlockBreakListener.java">
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/ConnectionScheclule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="14" column="13" selection-start="345" selection-end="345" vertical-scroll-proportion="0.25757575" vertical-offset="0" max-vertical-offset="924">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/Vault.jar!/net/milkbowl/vault/permission/Permission.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="19" selection-start="762" selection-end="762" vertical-scroll-proportion="0.34260288" vertical-offset="49" max-vertical-offset="1870" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Bukkit/Bukkit Build Paths/craftbukkit-1.7.2-R0.3.jar!/org/bukkit/permissions/Permissible.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="367" selection-end="367" vertical-scroll-proportion="0.189099" vertical-offset="0" max-vertical-offset="899" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="0" selection-start="6564" selection-end="6564" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3213">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Swimming_Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -758,45 +702,162 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/ChatFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="248" selection-end="294" vertical-scroll-proportion="0.20238096" vertical-offset="0" max-vertical-offset="924">
+        <state line="11" column="25" selection-start="248" selection-end="294" vertical-scroll-proportion="0.20708749" vertical-offset="0" max-vertical-offset="903">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerJoinListener.java">
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/EnergyAddRemUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.07359307" vertical-offset="0" max-vertical-offset="924">
+        <state line="16" column="70" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/PotionCraftingUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/EnergyDecreaseScheclule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/PotionEffectsScheclule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="23" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/BedExitScheclule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="297" selection-end="297" vertical-scroll-proportion="0.13178295" vertical-offset="0" max-vertical-offset="903">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Schedules/WaysToGetEnergySchecule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="0.4330011" vertical-offset="0" max-vertical-offset="903">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Sprinting_Listener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.07359307" vertical-offset="0" max-vertical-offset="924">
-          <folding />
+        <state line="20" column="38" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerSleepListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="53" selection-start="872" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+        <state line="43" column="13" selection-start="1812" selection-end="1812" vertical-scroll-proportion="0.4883721" vertical-offset="1" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/BlockPlaceListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="65" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerDeathListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="50" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/BlockBreakListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="65" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerJoinListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="65" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.47065338" vertical-offset="0" max-vertical-offset="903">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerItemConsumeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.055194806" vertical-offset="0" max-vertical-offset="924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerQuitListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.07359307" vertical-offset="0" max-vertical-offset="924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerMove_Walking_Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="79" selection-start="851" selection-end="851" vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="924">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/MetricsLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="48" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.38636363" vertical-offset="391" max-vertical-offset="8347">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Util/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="681" selection-end="681" vertical-scroll-proportion="0.27597404" vertical-offset="0" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/SleepyFeeling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="0" selection-start="5840" selection-end="5840" vertical-scroll-proportion="-0.16558442" vertical-offset="1632" max-vertical-offset="3349">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Configuration/PlayersConf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+        <state line="10" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Commands/SleepyFeelingCMD.java">
+    <entry file="file://$PROJECT_DIR$/src/me/vasil7112/SleepyFeeling/Listeners/PlayerRespawnListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="36" selection-start="5478" selection-end="5516" vertical-scroll-proportion="0.77922076" vertical-offset="1575" max-vertical-offset="2499">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="9" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.07359307" vertical-offset="0" max-vertical-offset="924">
+          <folding />
         </state>
       </provider>
     </entry>

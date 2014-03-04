@@ -3,6 +3,7 @@ name: SleepyFeeling
 description: SleepyFeeling
 version: 1.2.1
 author: vasil7112
+depend: [Vault, WorldGuard, Essentials]
 commands:
    SleepyFeeling:
       description: Displays all commands.

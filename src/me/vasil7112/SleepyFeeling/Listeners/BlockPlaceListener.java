@@ -7,6 +7,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
+import static me.vasil7112.SleepyFeeling.SleepyFeeling.hasPermission;
+
 public class BlockPlaceListener implements Listener{
 
 	private SleepyFeeling plugin;
@@ -18,8 +20,9 @@ public class BlockPlaceListener implements Listener{
 	@EventHandler
 	public void onBlockPlaceEvent(BlockPlaceEvent e){
 		Player player = e.getPlayer();
-		if(!player.hasPermission("SleepyFeeling.Bypass.BlockPlacing")){
-			plugin.EARU.RemEnergy(player, plugin.cConfig.getCustomConfig().getString("Configuration.WaysToLoseEnergy.BlockPlacing.DecreaseAmount"));
+		if(!hasPermission(player,"SleepyFeeling.Bypass.BlockPlacing")){
+			plugin.EARU.RemEnergy(player, plugin.getConfigString("Configuration.WaysToLoseEnergy.BlockPlacing.DecreaseAmount"));
 		}
 	}
+
 }
