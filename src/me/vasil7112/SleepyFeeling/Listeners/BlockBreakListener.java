@@ -18,7 +18,7 @@ public class BlockBreakListener implements Listener{
 	public void onBlockBreakEvent(BlockBreakEvent e){
 		Player player = e.getPlayer();
 		if(!player.hasPermission("SleepyFeeling.Bypass.BlockBreaking")){
-			plugin.EARU.RemEnergy(player, plugin.cConfig.getCustomConfig().getString("Configuration.WaysToLoseEnergy.BlockBreaking.DecreaseAmount"));
+			plugin.EARU.RemEnergy(player, plugin.getConfigString("Configuration.WaysToLoseEnergy.BlockBreaking.DecreaseAmount"));
 		}
 	}
 }

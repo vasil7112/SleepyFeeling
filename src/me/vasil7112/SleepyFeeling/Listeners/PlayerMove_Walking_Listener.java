@@ -5,19 +5,23 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
+import static me.vasil7112.SleepyFeeling.SleepyFeeling.hasGod;
+import static me.vasil7112.SleepyFeeling.SleepyFeeling.hasPermission;
 
 public class PlayerMove_Walking_Listener implements Listener{
 
-	private SleepyFeeling plugin;
-	public PlayerMove_Walking_Listener(SleepyFeeling plugin){
-		this.plugin = plugin;
+	private final SleepyFeeling sleepyFeeling;
+
+	public PlayerMove_Walking_Listener(SleepyFeeling sleepyFeeling) {
+		this.sleepyFeeling = sleepyFeeling;
 	}
 	
 	@EventHandler
 	public void onPlayerMoveEvent(PlayerMoveEvent e){
 		Player player = e.getPlayer();
-		if(!player.hasPermission("SleepyFeeling.Bypass.Walking")){
-			plugin.EARU.RemEnergy(player, plugin.cConfig.getCustomConfig().getString("Configuration.WaysToLoseEnergy.Walking.DecreaseAmount"));
+		if(!hasPermission(player, "SleepyFeeling.Bypass.Walking") && !hasGod(player)){
+			sleepyFeeling.EARU.RemEnergy(player, sleepyFeeling.getConfigString("Configuration.WaysToLoseEnergy.Walking.DecreaseAmount"));
 		}
 	}
+
 }

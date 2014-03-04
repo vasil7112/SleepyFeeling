@@ -6,6 +6,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import static me.vasil7112.SleepyFeeling.SleepyFeeling.hasGod;
+import static me.vasil7112.SleepyFeeling.SleepyFeeling.hasPermission;
+
 public class PlayerMove_Sprinting_Listener implements Listener{
 
 	private SleepyFeeling plugin;
@@ -17,9 +20,10 @@ public class PlayerMove_Sprinting_Listener implements Listener{
 	public void onPlayerMoveEvent(PlayerMoveEvent e){
 		Player player = e.getPlayer();
 		if(player.isSprinting()){
-			if(!player.hasPermission("SleepyFeeling.Bypass.Sprinting")){
-				plugin.EARU.RemEnergy(player, plugin.cConfig.getCustomConfig().getString("Configuration.WaysToLoseEnergy.Sprinting.DecreaseAmount"));
+			if(!hasPermission(player,"SleepyFeeling.Bypass.Sprinting") && !hasGod(player)){
+				plugin.EARU.RemEnergy(player, plugin.getConfigString("Configuration.WaysToLoseEnergy.Sprinting.DecreaseAmount"));
 			}
 		}
 	}
+
 }

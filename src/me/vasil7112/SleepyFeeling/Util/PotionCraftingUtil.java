@@ -57,4 +57,5 @@ private SleepyFeeling plugin;
 			PICL.IdisplayLore.put(i, this.plugin.cConfig.getCustomConfig().getString("Configuration.EnergyDrinksAndFood."+i+".Lore"));
 		}
 	}
+
 }
