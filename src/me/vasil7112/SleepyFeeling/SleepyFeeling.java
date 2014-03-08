@@ -26,6 +26,7 @@ import me.vasil7112.SleepyFeeling.Listeners.PlayerQuitListener;
 import me.vasil7112.SleepyFeeling.Listeners.PlayerRespawnListener;
 import me.vasil7112.SleepyFeeling.Listeners.PlayerSleepListener;
 import me.vasil7112.SleepyFeeling.Util.EnergyAddRemUtil;
+import me.vasil7112.SleepyFeeling.Util.HeadsUpDisplay;
 import me.vasil7112.SleepyFeeling.Util.PotionCraftingUtil;
 import me.vasil7112.SleepyFeeling.Util.PotionEffectsUtil;
 import me.vasil7112.SleepyFeeling.Util.ShowEnergyUtil;
@@ -38,6 +39,7 @@ public class SleepyFeeling extends JavaPlugin{
 	public PotionEffectsUtil PEU;
 	public EnergyAddRemUtil EARU;
 	public ShowEnergyUtil SEU;
+	public HeadsUpDisplay HUD;
 	public ArrayList<String> Players = new ArrayList<String>();
 	public ArrayList<Player> Sleeping = new ArrayList<Player>();
 	public HashMap<Player, Float> Energy = new HashMap<Player , Float>();
@@ -54,6 +56,7 @@ public class SleepyFeeling extends JavaPlugin{
 		
 		PEU = new PotionEffectsUtil(this);
 		EARU = new EnergyAddRemUtil(this);
+		HUD = new HeadsUpDisplay(this);
 		EnergyDecreaseTick = cConfig.getCustomConfig().getInt("Configuration.Energy.EnergyDecreaseTick");
 		EnergyDecreaseAmount = Float.valueOf(cConfig.getCustomConfig().getString("Configuration.Energy.EnergyDecreaseAmount"));
 		MaxEnergy = Float.valueOf(cConfig.getCustomConfig().getString("Configuration.Energy.MaxEnergy"));
@@ -62,6 +65,7 @@ public class SleepyFeeling extends JavaPlugin{
 		Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new PlayerRespawnListener(this), this);
+		//Bukkit.getPluginManager().registerEvents(new PlayerChatListener(this), this);
 		PotionCraftingUtil PCU = new PotionCraftingUtil(this);
 		PCU.addCraftingRecipes();
 		Bukkit.getPluginManager().registerEvents(new PlayerItemConsumeListener(this), this);
